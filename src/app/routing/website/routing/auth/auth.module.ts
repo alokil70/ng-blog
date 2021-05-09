@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthPageComponent } from './pages/auth-page/auth-page.component';
-import {RouterModule} from '@angular/router';
-import {LoginBlockModule} from '../../../../view/login-block/login-block.module';
-
-
+import { RouterModule } from '@angular/router';
+import { LoginBlockModule } from '../../../../view/login-block/login-block.module';
 
 @NgModule({
-  declarations: [
-    AuthPageComponent
-  ],
+  declarations: [AuthPageComponent],
   imports: [
     CommonModule,
     LoginBlockModule,
@@ -17,13 +13,13 @@ import {LoginBlockModule} from '../../../../view/login-block/login-block.module'
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'login'
+        redirectTo: 'login',
       },
       {
         path: 'login',
-        component: AuthPageComponent
-      }
-    ])
-  ]
+        component: AuthPageComponent,
+      },
+    ]),
+  ],
 })
-export class AuthModule { }
+export class AuthModule {}

@@ -3,16 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-login-block',
   templateUrl: './login-block.component.html',
-  styleUrls: ['./login-block.component.scss']
+  styleUrls: ['./login-block.component.scss'],
 })
 export class LoginBlockComponent implements OnInit {
-
   serverError = '';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onLogin(value) {
     console.log('onLogin', value);
