@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "clean-with-mat": {
+    "clean": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/clean-with-mat",
+            "outputPath": "dist/ng-blog",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "clean-with-mat:build"
+            "browserTarget": "clean:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "clean-with-mat:build:production"
+              "browserTarget": "clean:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "clean-with-mat:build"
+            "browserTarget": "clean:build"
           }
         },
         "test": {
@@ -113,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "clean-with-mat:serve"
+            "devServerTarget": "clean:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "clean-with-mat:serve:production"
+              "devServerTarget": "clean:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "clean-with-mat"
+  "defaultProject": "clean"
 }

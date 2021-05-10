@@ -15,17 +15,20 @@ import { DEFAULT_ROUTER_FEATURENAME, routerReducer } from '@ngrx/router-store';
       {
         path: '',
         pathMatch: 'full',
-        loadChildren: () => import('./routing/home/home.module').then((module) => module.HomeModule),
+        loadChildren: () =>
+          import('./routing/home/home.module').then((module) => module.HomeModule),
       },
       {
         path: 'admin/auth',
-        loadChildren: () => import('./routing/auth/auth.module').then((module) => module.AuthModule),
+        loadChildren: () =>
+          import('./routing/auth/auth.module').then((module) => module.AuthModule),
         canActivate: [AdminGuestGuard],
         canLoad: [AdminGuestGuard],
       },
       {
         path: 'admin',
-        loadChildren: () => import('./routing/admin/admin.module').then((module) => module.AdminModule),
+        loadChildren: () =>
+          import('./routing/admin/admin.module').then((module) => module.AdminModule),
         canActivate: [AdminAuthGuard],
         canLoad: [AdminAuthGuard],
       },
@@ -35,7 +38,8 @@ import { DEFAULT_ROUTER_FEATURENAME, routerReducer } from '@ngrx/router-store';
       },
       {
         path: 'not-found',
-        loadChildren: () => import('./routing/not-found/not-found.module').then((module) => module.NotFoundModule),
+        loadChildren: () =>
+          import('./routing/not-found/not-found.module').then((module) => module.NotFoundModule),
       },
     ]),
   ],

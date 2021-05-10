@@ -16,14 +16,19 @@ export class LoginFormUiComponent implements OnInit {
 
   ngOnInit(): void {
     this.formGroup = new FormGroup({
-      login: new FormControl('', [Validators.required]),
-      password: new FormControl('', [Validators.required]),
+      login: new FormControl('', [Validators.required, Validators.email, Validators.minLength(6)]),
+      password: new FormControl('', [Validators.required, Validators.minLength(8)]),
     });
   }
+
   onFormChange() {
     this.formError = '';
   }
+
   onFormSubmit() {
+    if (this.formGroup.invalid) {
+      return;
+    }
     this.login.emit(this.formGroup.value);
   }
 }

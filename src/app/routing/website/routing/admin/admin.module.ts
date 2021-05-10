@@ -14,7 +14,8 @@ import { RouterModule } from '@angular/router';
       },
       {
         path: 'dashboard',
-        loadChildren: () => import('./routes/dashboard/dashboard.module').then((module) => module.DashboardModule),
+        loadChildren: () =>
+          import('./routes/dashboard/dashboard.module').then((module) => module.DashboardModule),
       },
     ]),
   ],
