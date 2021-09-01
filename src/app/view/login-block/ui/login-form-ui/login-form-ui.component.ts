@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class LoginFormUiComponent implements OnInit {
   formGroup: FormGroup;
 
-  @Input() formError = 'err';
+  @Input() formError = '';
   @Output() login = new EventEmitter();
 
   constructor() {}

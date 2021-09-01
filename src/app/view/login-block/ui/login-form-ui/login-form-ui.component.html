@@ -14,4 +14,6 @@
 
   <button [disabled]="formGroup.invalid || !!formError">Войти</button>
   <small *ngIf="formError">{{ formError }}</small>
+	{{ formGroup.errors | json }}
+	{{ formGroup.invalid | json }}
 </form>
