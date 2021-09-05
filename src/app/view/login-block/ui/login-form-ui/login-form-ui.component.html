@@ -1,5 +1,5 @@
 <form [formGroup]="formGroup" (input)="onFormChange()" (ngSubmit)="onFormSubmit()" class="card">
-  <h2>Авторизация</h2>
+  <div class='p5'>Зарегистрируйтесь магнитной картой или кодом с паролем</div>
   <div class='p5'>
     <label>Логин</label>
     <input formControlName="login" />
@@ -12,7 +12,7 @@
     <small>обязательное поле</small>
   </div>
 
-  <button [disabled]="formGroup.invalid || !!formError">Войти</button>
+  <button [disabled]="formGroup.invalid || !!formError" class='p5'>Войти</button>
   <small *ngIf="formError">{{ formError }}</small>
 	{{ formGroup.errors | json }}
 	{{ formGroup.invalid | json }}
