@@ -1,12 +1,12 @@
 <form [formGroup]="formGroup" (input)="onFormChange()" (ngSubmit)="onFormSubmit()" class="card">
   <h2>Авторизация</h2>
-  <div>
+  <div class='p5'>
     <label>Логин</label>
     <input formControlName="login" />
     <small>обязательное поле</small>
   </div>
 
-  <div>
+  <div class='p5'>
     <label>Пароль</label>
     <input formControlName="password" type="password" />
     <small>обязательное поле</small>
