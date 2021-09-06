@@ -3,13 +3,13 @@
   <div class='p5'>
     <label>Логин</label>
     <input formControlName="login" />
-    <small>обязательное поле</small>
+    <small *ngIf="formGroup.hasError('required', 'login')">обязательное поле</small>
   </div>
 
   <div class='p5'>
     <label>Пароль</label>
     <input formControlName="password" type="password" />
-    <small>обязательное поле</small>
+    <small *ngIf="formGroup.hasError('required', 'password')">обязательное поле</small>
   </div>
 
   <button [disabled]="formGroup.invalid || !!formError" class='p5'>Войти</button>

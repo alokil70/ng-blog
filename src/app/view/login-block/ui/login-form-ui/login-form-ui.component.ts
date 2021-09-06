@@ -7,6 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login-form-ui.component.scss'],
 })
 export class LoginFormUiComponent implements OnInit {
+
   formGroup: FormGroup;
 
   @Input() formError = '';
@@ -22,7 +23,7 @@ export class LoginFormUiComponent implements OnInit {
   }
 
   onFormChange() {
-    this.formError = '';
+    this.formError += '';
   }
 
   onFormSubmit() {
