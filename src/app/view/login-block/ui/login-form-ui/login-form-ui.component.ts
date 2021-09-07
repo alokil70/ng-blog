@@ -23,7 +23,7 @@ export class LoginFormUiComponent implements OnInit {
   }
 
   onFormChange() {
-    this.formError += '';
+    this.formError = '';
   }
 
   onFormSubmit() {

@@ -4,21 +4,21 @@
 	(ngSubmit)="onFormSubmit()"
 	class="form"
 >
-	<div class='p5'>Зарегистрируйтесь магнитной картой или кодом с паролем</div>
+	<div class="p5">Зарегистрируйтесь магнитной картой или кодом с паролем</div>
 
-	<div class='p5'>
+	<div class="p5">
 		<label>Логин</label>
 		<input formControlName="login" />
 		<small *ngIf="formGroup.hasError('required', 'login')">обязательное поле</small>
 	</div>
 
-	<div class='p5'>
+	<div class="p5">
 		<label>Пароль</label>
 		<input formControlName="password" type="password" />
 		<small *ngIf="formGroup.hasError('required', 'password')">обязательное поле</small>
 	</div>
 
-	<button [disabled]="formGroup.invalid || !!formError" class='p5'>Войти</button>
+	<button [disabled]="formGroup.invalid || !!formError" class="p5">Войти</button>
 
 	<small *ngIf="formError">{{ formError }}</small>
 
@@ -40,6 +40,12 @@
 				formGroup.getError('required', 'login'
 			</i>
 			<b>{{formGroup.getError('required', 'login')}}</b>
+		</div>
+		<div class="debug-card_block">
+			<i>
+				formGroup.getError('required', 'password'
+			</i>
+			<b>{{formGroup.getError('required', 'password')}}</b>
 		</div>
 		<div class="debug-card_block">
 			<i>
