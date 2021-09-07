@@ -1,19 +1,57 @@
-<form [formGroup]="formGroup" (input)="onFormChange()" (ngSubmit)="onFormSubmit()" class="card">
-  <div class='p5'>Зарегистрируйтесь магнитной картой или кодом с паролем</div>
-  <div class='p5'>
-    <label>Логин</label>
-    <input formControlName="login" />
-    <small *ngIf="formGroup.hasError('required', 'login')">обязательное поле</small>
-  </div>
+<form
+	[formGroup]="formGroup"
+	(change)="onFormChange()"
+	(ngSubmit)="onFormSubmit()"
+	class="form"
+>
+	<div class='p5'>Зарегистрируйтесь магнитной картой или кодом с паролем</div>
 
-  <div class='p5'>
-    <label>Пароль</label>
-    <input formControlName="password" type="password" />
-    <small *ngIf="formGroup.hasError('required', 'password')">обязательное поле</small>
-  </div>
+	<div class='p5'>
+		<label>Логин</label>
+		<input formControlName="login" />
+		<small *ngIf="formGroup.hasError('required', 'login')">обязательное поле</small>
+	</div>
 
-  <button [disabled]="formGroup.invalid || !!formError" class='p5'>Войти</button>
-  <small *ngIf="formError">{{ formError }}</small>
-	{{ formGroup.errors | json }}
-	{{ formGroup.invalid | json }}
+	<div class='p5'>
+		<label>Пароль</label>
+		<input formControlName="password" type="password" />
+		<small *ngIf="formGroup.hasError('required', 'password')">обязательное поле</small>
+	</div>
+
+	<button [disabled]="formGroup.invalid || !!formError" class='p5'>Войти</button>
+
+	<small *ngIf="formError">{{ formError }}</small>
+
+	<div class="debug-card">
+		<div class="debug-card_block">
+			<i>
+				formGroup.errors | json
+			</i>
+			<b>{{ formGroup.errors | json }}</b>
+		</div>
+		<div class="debug-card_block">
+			<i>
+				formGroup.invalid | json
+			</i>
+			<b>{{ formGroup.invalid | json }}</b>
+		</div>
+		<div class="debug-card_block">
+			<i>
+				formGroup.getError('required', 'login'
+			</i>
+			<b>{{formGroup.getError('required', 'login')}}</b>
+		</div>
+		<div class="debug-card_block">
+			<i>
+				formGroup.get('login').errors | json
+			</i>
+			<b>{{formGroup.get('login').errors | json}}</b>
+		</div>
+		<div class="debug-card_block">
+			<i>
+				formGroup.get('password').errors | json
+			</i>
+			<b>{{formGroup.get('password').errors | json}}</b>
+		</div>
+	</div>
 </form>

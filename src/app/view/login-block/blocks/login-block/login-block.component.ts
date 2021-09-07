@@ -14,6 +14,6 @@ export class LoginBlockComponent implements OnInit {
 
   onLogin(value) {
     console.log('onLogin', value);
-    this.serverError += 'ok ';
+    this.serverError += 'error';
   }
 }

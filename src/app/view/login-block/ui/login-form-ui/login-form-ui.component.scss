@@ -1,4 +1,4 @@
-.card{
+.form{
 	width: 500px;
 	padding: 20px;
 	input{
@@ -8,4 +8,18 @@
 }
 .p5{
 	padding: 5px;
+}
+
+.debug-card{
+	width: 700px;
+	margin-top: 20px;
+	border: 10px solid grey;
+	border-radius: 10px;
+	padding: 20px;
+	&_block{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
 }
