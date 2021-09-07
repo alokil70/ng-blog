@@ -11,7 +11,7 @@ export class LoginFormUiComponent implements OnInit {
   formGroup: FormGroup;
 
   @Input() formError = '';
-  @Output() login = new EventEmitter();
+  @Output() output = new EventEmitter();
 
   constructor() {}
 
@@ -30,6 +30,6 @@ export class LoginFormUiComponent implements OnInit {
     if (this.formGroup.invalid) {
       return;
     }
-    this.login.emit(this.formGroup.value);
+    this.output.emit(this.formGroup.value);
   }
 }

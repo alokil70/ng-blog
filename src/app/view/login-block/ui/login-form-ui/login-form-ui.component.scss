@@ -1,6 +1,10 @@
 .form{
 	width: 500px;
 	padding: 20px;
+	label{
+		width: 100px;
+		margin-right: 5px;
+	}
 	input{
 		border: none;
 		outline: none;
