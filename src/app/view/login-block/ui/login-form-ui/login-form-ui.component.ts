@@ -11,6 +11,7 @@ export class LoginFormUiComponent implements OnInit {
   formGroup: FormGroup;
 
   @Input() formError = '';
+	@Input() disabled: boolean;
   @Output() output = new EventEmitter();
 
   constructor() {}

@@ -18,7 +18,7 @@
 		<small *ngIf="formGroup.hasError('required', 'password')">обязательное поле</small>
 	</div>
 
-	<button [disabled]="formGroup.invalid || !!formError" class="p5">Войти</button>
+	<button [disabled]="disabled || formGroup.invalid || !!formError" class="p5">Войти</button>
 
 	<small *ngIf="formError">{{ formError }}</small>
 

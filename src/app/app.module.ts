@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { AuthStoreModule } from './store/auth/auth-store.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     RouterModule.forRoot([]),
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    StoreRouterConnectingModule.forRoot()
+    StoreRouterConnectingModule.forRoot(),
+		AuthStoreModule
   ],
   providers: [],
   bootstrap: [AppComponent],
