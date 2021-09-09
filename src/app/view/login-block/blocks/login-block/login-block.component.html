@@ -1,7 +1,7 @@
 <app-login-form-ui
-	*ngIf='loaded$ | async'
-	[disabled]='loading$ | async'
-	(output)="onLogin($event)"
-	[formError]="serverError$ | async"
+  *ngIf="loaded$ | async"
+  [disabled]="loading$ | async"
+  (output)="onLogin($event)"
+  [formError]="serverError$ | async"
 ></app-login-form-ui>
 <app-keyboard></app-keyboard>

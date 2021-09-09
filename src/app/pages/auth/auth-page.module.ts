@@ -22,4 +22,4 @@ import { LoginBlockModule } from '../../view/login-block/login-block.module';
     ]),
   ],
 })
-export class AuthModule {}
+export class AuthPageModule {}

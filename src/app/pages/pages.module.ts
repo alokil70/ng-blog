@@ -15,20 +15,18 @@ import { DEFAULT_ROUTER_FEATURENAME, routerReducer } from '@ngrx/router-store';
       {
         path: '',
         pathMatch: 'full',
-        loadChildren: () =>
-          import('./home/home.module').then((module) => module.HomeModule),
+        loadChildren: () => import('./home/home.module').then((module) => module.HomeModule),
       },
       {
         path: 'admin/auth',
         loadChildren: () =>
-          import('./auth/auth.module').then((module) => module.AuthModule),
+          import('./auth/auth-page.module').then((module) => module.AuthPageModule),
         canActivate: [AdminGuestGuard],
         canLoad: [AdminGuestGuard],
       },
       {
         path: 'admin',
-        loadChildren: () =>
-          import('./admin/admin.module').then((module) => module.AdminModule),
+        loadChildren: () => import('./admin/admin.module').then((module) => module.AdminModule),
         canActivate: [AdminAuthGuard],
         canLoad: [AdminAuthGuard],
       },

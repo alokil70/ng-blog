@@ -7,18 +7,17 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login-form-ui.component.scss'],
 })
 export class LoginFormUiComponent implements OnInit {
-
   formGroup: FormGroup;
 
   @Input() formError = '';
-	@Input() disabled: boolean;
+  @Input() disabled: boolean;
   @Output() output = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {
     this.formGroup = new FormGroup({
-      login: new FormControl('', [Validators.required, Validators.email, Validators.minLength(6)]),
+      email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(6)]),
       password: new FormControl('', [Validators.required, Validators.minLength(8)]),
     });
   }

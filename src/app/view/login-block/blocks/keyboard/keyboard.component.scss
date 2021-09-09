@@ -1,0 +1,11 @@
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  button {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    padding: 10px;
+  }
+}
