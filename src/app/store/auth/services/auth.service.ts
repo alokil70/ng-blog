@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { AuthData } from '../auth/auth.reducer';
+import { AuthData } from '../auth.reducer';
 
 @Injectable({
   providedIn: 'root',
