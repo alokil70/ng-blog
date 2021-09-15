@@ -1,10 +1,14 @@
 import { createAction, props } from '@ngrx/store';
+import { AuthData } from './auth.reducer';
 
-export const login = createAction('[Auth] login',
-  props<{ email: string; password: string }>());
+export enum ELoginActions {
+  Login = '[Auth] login',
+  LoginSuccess = '[Auth] loginSuccess',
+  LoginFailed = '[Auth] loginFailed'
+}
 
-export const loginSuccess = createAction('[Auth] loginSuccess',
-  props<{ accessToken: string }>());
+export const login = createAction(ELoginActions.Login, props<{ email: string; password: string }>());
 
-export const loginFailed = createAction('[Auth] loginFailed',
-  props<{ serverError: string }>());
+export const loginSuccess = createAction(ELoginActions.LoginSuccess, props<{ authData: AuthData }>());
+
+export const loginFailed = createAction(ELoginActions.LoginFailed, props<{ serverError: string }>());

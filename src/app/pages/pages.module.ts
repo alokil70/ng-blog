@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AdminGuestGuard } from '../guards/admin-guest.guard';
 import { AdminAuthGuard } from '../guards/admin-auth.guard';
 import { StoreModule } from '@ngrx/store';

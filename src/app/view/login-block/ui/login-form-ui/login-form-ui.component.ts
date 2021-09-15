@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../../../store/auth/services/auth.service';
 
 @Component({
   selector: 'app-login-form-ui',
@@ -8,12 +9,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginFormUiComponent implements OnInit {
   formGroup: FormGroup;
+  isAuth = this.authService.isAuth$;
 
   @Input() formError = '';
   @Input() disabled: boolean;
   @Output() output = new EventEmitter();
 
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
     this.formGroup = new FormGroup({

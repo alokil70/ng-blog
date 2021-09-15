@@ -7,12 +7,13 @@ import { of } from 'rxjs';
 
 @Injectable()
 export class AuthEffects {
-  login$ = createEffect(() =>
-    this.actions$.pipe(ofType(login), switchMap((action) =>
+  login$ = createEffect(() => this.actions$.pipe(
+      ofType(login),
+      switchMap((action) =>
         this.authService
           .login({ email: action.email, password: action.password })
           .pipe(
-            map((successData) => loginSuccess(successData)),
+            map((authData) => loginSuccess({ authData })),
             catchError(err => of(loginFailed({
               serverError: err.error.message
             })))
